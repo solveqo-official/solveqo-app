@@ -38,6 +38,10 @@ export type HomeCopy = {
   feature3Body: string;
   ctaTitle: string;
   ctaBodyHtml: string;
+  downloadTitle: string;
+  downloadBody: string;
+  downloadStoreAppStore: string;
+  downloadStoreGooglePlay: string;
 };
 
 export type SupportCopy = {
@@ -104,6 +108,7 @@ export type SiteCopy = {
   locale: Locale;
   langLabel: string;
   menu: string;
+  downloadAppCta: string;
   footerTagline: string;
   footerRights: string;
   nav: NavLink[];

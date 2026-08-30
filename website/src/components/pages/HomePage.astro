@@ -54,4 +54,25 @@ const t = getTranslations(locale);
     <h2>{t.home.ctaTitle}</h2>
     <p set:html={t.home.ctaBodyHtml} />
   </section>
+
+  <section id="download" class="container download-section" aria-labelledby="download-heading">
+    <div class="download-card">
+      <img
+        class="download-card__pin"
+        src="/branding/pin-solveqo.png"
+        alt=""
+        width="56"
+        height="56"
+        decoding="async"
+      />
+      <div class="download-card__content">
+        <h2 id="download-heading">{t.home.downloadTitle}</h2>
+        <p>{t.home.downloadBody}</p>
+        <div class="download-store-slots">
+          <div class="store-slot store-slot--placeholder">{t.home.downloadStoreAppStore}</div>
+          <div class="store-slot store-slot--placeholder">{t.home.downloadStoreGooglePlay}</div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

@@ -4,6 +4,7 @@ const copy: SiteCopy = {
   locale: 'en',
   langLabel: 'English',
   menu: 'Menu',
+  downloadAppCta: 'Download app',
   footerTagline: 'Local services marketplace connecting customers and professionals.',
   footerRights: 'All rights reserved.',
   nav: [
@@ -42,6 +43,11 @@ const copy: SiteCopy = {
     ctaTitle: 'Need help with your account?',
     ctaBodyHtml:
       'Visit our <a href="/en/support">Support center</a>, read the <a href="/en/community-guidelines">Community guidelines</a>, or email <a href="mailto:support@solveqo.com">support@solveqo.com</a>.',
+    downloadTitle: 'Download SOLVEQO',
+    downloadBody:
+      'The SOLVEQO mobile app will be available for iOS and Android. Store download links will appear here when the app launches.',
+    downloadStoreAppStore: 'App Store — coming soon',
+    downloadStoreGooglePlay: 'Google Play — coming soon',
   },
   support: {
     meta: {

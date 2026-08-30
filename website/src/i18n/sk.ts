@@ -4,6 +4,7 @@ const copy: SiteCopy = {
   locale: 'sk',
   langLabel: 'Slovenčina',
   menu: 'Menu',
+  downloadAppCta: 'Stiahnuť aplikáciu',
   footerTagline: 'Trhovisko lokálnych služieb spájajúce zákazníkov a profesionálov.',
   footerRights: 'Všetky práva vyhradené.',
   nav: [
@@ -42,6 +43,11 @@ const copy: SiteCopy = {
     ctaTitle: 'Potrebujete pomoc s účtom?',
     ctaBodyHtml:
       'Navštívte naše <a href="/support">Centrum podpory</a>, prečítajte si <a href="/community-guidelines">Pravidlá komunity</a> alebo napíšte na <a href="mailto:support@solveqo.com">support@solveqo.com</a>.',
+    downloadTitle: 'Stiahnite si SOLVEQO',
+    downloadBody:
+      'Mobilná aplikácia SOLVEQO bude dostupná pre iOS a Android. Odkazy na stiahnutie v obchodoch sa tu zobrazia po uvedení aplikácie.',
+    downloadStoreAppStore: 'App Store — čoskoro',
+    downloadStoreGooglePlay: 'Google Play — čoskoro',
   },
   support: {
     meta: {

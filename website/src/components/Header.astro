@@ -12,15 +12,38 @@ const t = getTranslations(locale);
 const homePath = localePath(locale, 'home');
 const skPath = localePath('sk', route);
 const enPath = localePath('en', route);
+const downloadHref = route === 'home' ? '#download' : `${homePath}#download`;
 ---
 
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="brand" href={homePath}>
-      <img class="brand__mark" src="/branding/pin-solveqo.png" alt="" width="40" height="40" />
+      <img
+        class="brand__mark"
+        src="/branding/pin-solveqo.png"
+        alt=""
+        width="34"
+        height="34"
+        decoding="async"
+      />
       <span class="brand__name">{SITE.name}</span>
     </a>
-    <div class="site-header__actions">
+
+    <nav id="site-nav" class="site-nav" data-site-nav aria-label="Primary">
+      <a class="header-cta header-cta--in-nav" href={downloadHref}>{t.downloadAppCta}</a>
+      {
+        t.nav.map((link) => {
+          const href = localePath(locale, link.route);
+          return (
+            <a href={href} aria-current={route === link.route ? 'page' : undefined}>
+              {link.label}
+            </a>
+          );
+        })
+      }
+    </nav>
+
+    <div class="site-header__end">
       <div class="lang-switch" aria-label="Language">
         <a
           href={skPath}
@@ -40,21 +63,14 @@ const enPath = localePath('en', route);
           aria-current={locale === 'en' ? 'true' : undefined}>EN</a
         >
       </div>
-      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
-        {t.menu}
-      </button>
+      <a class="header-cta header-cta--desktop" href={downloadHref}>{t.downloadAppCta}</a>
+      <button
+        class="nav-toggle"
+        type="button"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="site-nav">{t.menu}</button
+      >
     </div>
-    <nav id="site-nav" class="site-nav" data-site-nav aria-label="Primary">
-      {
-        t.nav.map((link) => {
-          const href = localePath(locale, link.route);
-          return (
-            <a href={href} aria-current={route === link.route ? 'page' : undefined}>
-              {link.label}
-            </a>
-          );
-        })
-      }
-    </nav>
   </div>
 </header>

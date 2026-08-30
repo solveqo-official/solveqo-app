@@ -79,10 +79,47 @@ button:focus-visible {
 .site-header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  min-height: 72px;
+  gap: 0.75rem 1rem;
+  min-height: 64px;
   position: relative;
+}
+
+.site-header__end {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.95rem;
+  background: var(--brand);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+
+.header-cta:hover {
+  background: var(--brand-dark);
+  color: #ffffff;
+}
+
+.header-cta:focus-visible {
+  outline: 2px solid var(--brand-dark);
+  outline-offset: 2px;
+}
+
+.header-cta--in-nav {
+  display: none;
 }
 
 .site-header__actions {
@@ -122,21 +159,25 @@ button:focus-visible {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.55rem;
   color: var(--text);
   text-decoration: none;
   font-weight: 800;
   letter-spacing: 0.04em;
+  flex-shrink: 0;
 }
 
 .brand__mark {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
 }
 
 .brand__name {
-  font-size: 1.05rem;
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .nav-toggle {
@@ -153,14 +194,19 @@ button:focus-visible {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  justify-content: center;
+  flex: 1 1 auto;
+  gap: 0.65rem 1rem;
+  flex-wrap: wrap;
+  min-width: 0;
 }
 
 .site-nav a {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
+  line-height: 1.3;
 }
 
 .site-nav a:hover,
@@ -318,6 +364,64 @@ button:focus-visible {
   font-weight: 700;
 }
 
+.download-section {
+  margin: 0 0 4rem;
+  scroll-margin-top: 5rem;
+}
+
+.download-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.download-card__pin {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.download-card__content h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.download-card__content p {
+  margin: 0 0 1.25rem;
+  color: var(--text-secondary);
+  max-width: 42rem;
+}
+
+.download-store-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.store-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 10.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.store-slot--placeholder {
+  border: 1px dashed var(--border);
+  background: var(--surface-muted);
+  color: var(--text-muted);
+}
+
 .page-shell {
   padding: 3rem 0 4rem;
 }
@@ -454,35 +558,85 @@ button:focus-visible {
   .site-header__inner {
     position: relative;
     flex-wrap: wrap;
+    align-items: center;
   }
 
-  .site-header__actions {
+  .site-header__end {
     margin-left: auto;
+  }
+
+  .header-cta--desktop {
+    display: none;
   }
 
   .site-nav {
     display: none;
     position: absolute;
-    top: 72px;
+    top: 100%;
     left: 0;
     right: 0;
+    flex: none;
     flex-direction: column;
     align-items: stretch;
     padding: 1rem;
     background: var(--surface);
     border-bottom: 1px solid var(--border);
+    z-index: 10;
   }
 
   .site-nav.is-open {
     display: flex;
   }
 
+  .site-nav.is-open .header-cta--in-nav {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0.35rem;
+  }
+
   .site-nav a {
     padding: 0.65rem 0.25rem;
   }
 
-  .site-header__inner {
-    position: relative;
+  .download-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 1100px) {
+  .site-nav a {
+    font-size: 0.84rem;
+  }
+
+  .header-cta {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand__name {
+    font-size: 0.92rem;
+  }
+
+  .brand__mark {
+    width: 30px;
+    height: 30px;
+  }
+
+  .lang-switch {
+    padding: 0.3rem 0.45rem;
+  }
+
+  .nav-toggle {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.88rem;
+  }
+
+  .store-slot {
+    min-width: 100%;
   }
 }
 
