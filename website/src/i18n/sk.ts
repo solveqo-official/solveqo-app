@@ -215,8 +215,6 @@ const copy: SiteCopy = {
       intro:
         'Ako SOLVEQO zhromažďuje, používa a chráni osobné údaje pri používaní mobilnej aplikácie a súvisiacich služieb.',
     },
-    reviewNotice:
-      'Tieto Zásady ochrany súkromia aktualizujeme podľa nedávnych zmien v SOLVEQO vrátane ochrany telefónneho čísla, bezpečnostných funkcií, prístupu k úložisku, vymazania účtu a správy predplatného. Pred zverejnením aktualizovanej verzie nás kontaktujte na support@solveqo.com.',
   },
   terms: {
     meta: {

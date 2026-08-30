@@ -99,7 +99,11 @@ export type CommunityGuidelinesCopy = {
   sections: GuidelineSection[];
 };
 
-export type LegalPageCopy = {
+export type PrivacyCopy = {
+  meta: PageCopy;
+};
+
+export type TermsCopy = {
   meta: PageCopy;
   reviewNotice: string;
 };
@@ -116,6 +120,6 @@ export type SiteCopy = {
   support: SupportCopy;
   deleteAccount: DeleteAccountCopy;
   communityGuidelines: CommunityGuidelinesCopy;
-  privacy: LegalPageCopy;
-  terms: LegalPageCopy;
+  privacy: PrivacyCopy;
+  terms: TermsCopy;
 };

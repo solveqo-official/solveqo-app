@@ -215,8 +215,6 @@ const copy: SiteCopy = {
       intro:
         'How SOLVEQO collects, uses, and protects personal data when you use our mobile app and related services.',
     },
-    reviewNotice:
-      'This Privacy Policy is being updated to reflect recent changes to SOLVEQO, including phone privacy, safety features, storage access, account deletion, and subscription handling. Contact support@solveqo.com if you have questions before the updated version is published.',
   },
   terms: {
     meta: {
