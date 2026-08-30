@@ -12,7 +12,7 @@ const t = getTranslations(locale);
 const html = renderLegalMarkdown(loadLegalMarkdown('terms-of-service.md', locale));
 ---
 
-<BaseLayout locale={locale} route="terms" reviewNotice={t.terms.reviewNotice}>
+<BaseLayout locale={locale} route="terms">
   <section class="page-shell">
     <div class="container container--narrow">
       <header class="page-header">

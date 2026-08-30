@@ -105,7 +105,6 @@ export type PrivacyCopy = {
 
 export type TermsCopy = {
   meta: PageCopy;
-  reviewNotice: string;
 };
 
 export type SiteCopy = {

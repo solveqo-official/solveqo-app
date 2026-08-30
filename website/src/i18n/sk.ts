@@ -224,8 +224,6 @@ const copy: SiteCopy = {
       heading: 'Podmienky používania',
       intro: 'Pravidlá a očakávania pri používaní trhoviska SOLVEQO a súvisiacich služieb.',
     },
-    reviewNotice:
-      'Tieto Podmienky používania aktualizujeme podľa nedávnych zmien v SOLVEQO vrátane bezpečnostných funkcií, prístupu k úložisku, vymazania účtu a správy predplatného. Pred zverejnením aktualizovanej verzie nás kontaktujte na support@solveqo.com.',
   },
 };
 

@@ -224,8 +224,6 @@ const copy: SiteCopy = {
       heading: 'Terms of Service',
       intro: 'Rules and expectations for using the SOLVEQO marketplace and related services.',
     },
-    reviewNotice:
-      'These Terms of Service are being updated to reflect recent changes to SOLVEQO, including safety features, storage access, account deletion, and subscription handling. Contact support@solveqo.com if you have questions before the updated version is published.',
   },
 };
 
