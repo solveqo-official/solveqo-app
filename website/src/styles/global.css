@@ -269,8 +269,23 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
-.hero h1 {
+.hero__title {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.65rem, 2vw, 1rem);
   margin: 0 0 0.75rem;
+}
+
+.hero__title-pin {
+  width: clamp(2.35rem, 5.5vw, 3.75rem);
+  height: clamp(2.35rem, 5.5vw, 3.75rem);
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
+}
+
+.hero h1 {
+  margin: 0;
   font-size: clamp(2.4rem, 6vw, 4rem);
   line-height: 1.05;
   letter-spacing: -0.03em;
@@ -621,9 +636,8 @@ button:focus-visible {
     font-size: 0.92rem;
   }
 
-  .brand__mark {
-    width: 30px;
-    height: 30px;
+  .hero__title {
+    gap: 0.55rem;
   }
 
   .lang-switch {

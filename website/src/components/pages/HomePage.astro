@@ -16,7 +16,17 @@ const t = getTranslations(locale);
     <div class="container hero__grid">
       <div>
         <p class="eyebrow">{t.home.eyebrow}</p>
-        <h1>{SITE.name}</h1>
+        <div class="hero__title">
+          <img
+            class="hero__title-pin"
+            src="/branding/pin-solveqo.png"
+            alt=""
+            width="60"
+            height="60"
+            decoding="async"
+          />
+          <h1>{SITE.name}</h1>
+        </div>
         <p class="hero__tagline">{t.home.tagline}</p>
         <p class="hero__lead">{t.home.lead1}</p>
         <p class="hero__lead">{t.home.lead2}</p>
