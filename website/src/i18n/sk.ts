@@ -141,70 +141,8 @@ const copy: SiteCopy = {
         'Pravidlá slušného a bezpečného používania SOLVEQO. Informácie o nahlasovaní, blokovaní a vymáhaní pravidiel na našom trhovisku.',
       heading: 'Pravidlá komunity',
       intro:
-        'SOLVEQO spája zákazníkov a profesionálov na lokálnom trhovisku. Tieto pravidlá pomáhajú udržiavať komunitu slušnú, bezpečnú a užitočnú pre všetkých.',
+        'Očakávané správanie na trhovisku SOLVEQO vrátane bezpečnosti, nahlasovania, blokovania a vymáhania pravidiel.',
     },
-    sections: [
-      {
-        title: 'Buďte slušní',
-        bodyHtml:
-          'Správajte sa k ostatným s úctou. Jasne komunikujte o prácach, dostupnosti, cenových očakávaniach a rozsahu práce. Pri nezhodách zostávajte profesionálni a sústreďte sa na vecné riešenie.',
-      },
-      {
-        title: 'Žiadne obťažovanie ani hrozby',
-        bodyHtml:
-          'Nešikanujte, nezastrašujte, nestalkujte ani nevyhrážajte sa ostatným. Opakovaný nechcený kontakt, urážlivý jazyk alebo snaha tlačiť na používateľa po odmietnutí ponuky či zablokovaní nie je povolená.',
-      },
-      {
-        title: 'Žiadna diskriminácia ani nenávisť',
-        bodyHtml:
-          'SOLVEQO netoleruje diskrimináciu, urážky ani nenávistné správanie na základe rasy, etnicity, národnosti, náboženstva, pohlavia, sexuálnej orientácie, zdravotného postihnutia alebo veku.',
-      },
-      {
-        title: 'Žiadne podvody, klamstvo ani podvodné konanie',
-        bodyHtml:
-          'Nezneužívajte identitu iných, nevytvárajte falošné účty, nezavádzajte ohľadom zručností ani identity a nepokúšajte sa oklamať používateľov. Nepýtajte sa na platby mimo dohodnutých pravidiel ani na citlivé finančné údaje nesúvisiace s prácou.',
-      },
-      {
-        title: 'Žiadny spam',
-        bodyHtml:
-          'Neposielajte hromadné nevyžiadané správy, duplicitné ponuky, propagačný obsah nesúvisiaci s prácou ani opakovaný kontakt po odmietnutí či zablokovaní.',
-      },
-      {
-        title: 'Žiadna nelegálna ani nebezpečná aktivita',
-        bodyHtml:
-          'Nepoužívajte SOLVEQO na nelegálne služby, kradnutý tovar, nebezpečnú prácu, na ktorú nemáte kvalifikáciu, ani aktivitu, ktorá ohrozuje ostatných. Dodržiavajte platné zákony a bezpečnostné normy.',
-      },
-      {
-        title: 'Len vhodný obsah',
-        bodyHtml:
-          'Inzeráty prác, profily, portfólio a chat musia byť relevantné a vhodné. Nezverejňujte sexuálne explicitný obsah, grafické násilie ani materiál, ktorý zneužíva alebo ohrozuje ostatných — najmä maloletých.',
-      },
-      {
-        title: 'Pravdivé inzeráty a profily',
-        bodyHtml:
-          'Zákazníci majú popisovať práce pravdivo. Profesionáli majú presne uvádzať skúsenosti, služby a dostupnosť. Zavádzajúce nadpisy, fotky, lokality alebo ponuky narúšajú dôveru a môžu viesť k opatreniam voči účtu.',
-      },
-      {
-        title: 'Nahlasovanie',
-        bodyHtml:
-          'Ak vidíte obsah alebo správanie porušujúce tieto pravidlá, použite nahlasovanie v aplikácii. Môžete nás tiež kontaktovať na <a href="mailto:support@solveqo.com">support@solveqo.com</a> s e-mailom účtu, kontextom práce alebo chatu a popisom udalosti.',
-      },
-      {
-        title: 'Blokovanie',
-        bodyHtml:
-          'Používateľov môžete zablokovať, aby ste zabránili ďalšej interakcii. Blokovanie je nástroj osobnej bezpečnosti; pri vážnych alebo opakovaných porušeniach nás tiež informujte nahlasením.',
-      },
-      {
-        title: 'Vymáhanie pravidiel',
-        bodyHtml:
-          'SOLVEQO môže pri porušení týchto pravidiel, Podmienok používania alebo zákona upozorniť, obmedziť, pozastaviť alebo natrvalo odstrániť účty. Môžeme odstrániť obsah, obmedziť funkcie alebo prijať iné opatrenia na ochranu používateľov a trhoviska.',
-      },
-      {
-        title: 'Otázky',
-        bodyHtml:
-          'Pre pomoc alebo nahlásenie problému navštívte <a href="/support">Podporu</a> alebo napíšte na <a href="mailto:support@solveqo.com">support@solveqo.com</a>.',
-      },
-    ],
   },
   privacy: {
     meta: {

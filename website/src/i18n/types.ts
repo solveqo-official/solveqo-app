@@ -89,14 +89,8 @@ export type DeleteAccountCopy = {
   relatedSupport: string;
 };
 
-export type GuidelineSection = {
-  title: string;
-  bodyHtml: string;
-};
-
 export type CommunityGuidelinesCopy = {
   meta: PageCopy;
-  sections: GuidelineSection[];
 };
 
 export type PrivacyCopy = {

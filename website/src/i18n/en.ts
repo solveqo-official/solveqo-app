@@ -141,70 +141,8 @@ const copy: SiteCopy = {
         'Community guidelines for respectful, safe use of SOLVEQO. Learn about reporting, blocking, and enforcement on our marketplace.',
       heading: 'Community Guidelines',
       intro:
-        'SOLVEQO connects customers and professionals in a local marketplace. These guidelines help keep the community respectful, safe, and useful for everyone.',
+        'Expected conduct on the SOLVEQO marketplace, including safety, reporting, blocking, and enforcement.',
     },
-    sections: [
-      {
-        title: 'Be respectful',
-        bodyHtml:
-          'Treat others with courtesy. Communicate clearly about jobs, availability, pricing expectations, and scope of work. Disagreements happen — stay professional and focus on resolving the issue constructively.',
-      },
-      {
-        title: 'No harassment or threats',
-        bodyHtml:
-          'Do not bully, intimidate, stalk, or threaten other users. Repeated unwanted contact, abusive language, or attempts to pressure someone after they decline an offer or block you is not allowed.',
-      },
-      {
-        title: 'No discrimination or hate',
-        bodyHtml:
-          'SOLVEQO does not tolerate discrimination, slurs, or hateful conduct based on protected characteristics such as race, ethnicity, nationality, religion, gender, sexual orientation, disability, or age.',
-      },
-      {
-        title: 'No scams, fraud, or deception',
-        bodyHtml:
-          'Do not impersonate others, create fake accounts, misrepresent your skills or identity, or attempt to defraud users. Do not request payment outside agreed arrangements in ways designed to bypass trust and safety, or ask for sensitive financial details unrelated to completing a job.',
-      },
-      {
-        title: 'No spam',
-        bodyHtml:
-          'Do not send bulk unsolicited messages, duplicate offers, promotional content unrelated to a job, or repetitive contact after a user has declined or blocked you.',
-      },
-      {
-        title: 'No illegal or unsafe activity',
-        bodyHtml:
-          'Do not use SOLVEQO for illegal services, stolen goods, dangerous work you are not qualified to perform, or activity that puts others at risk. Follow applicable local laws and safety standards.',
-      },
-      {
-        title: 'Appropriate content only',
-        bodyHtml:
-          'Job posts, profile information, portfolio images, and chat messages must be relevant and appropriate. Do not post sexually explicit content, graphic violence, or material that exploits or endangers others — especially minors.',
-      },
-      {
-        title: 'Accurate jobs and profiles',
-        bodyHtml:
-          'Customers should describe jobs honestly. Professionals should represent their experience, services, and availability accurately. Misleading titles, photos, locations, or offers undermine trust and may lead to account action.',
-      },
-      {
-        title: 'Reporting',
-        bodyHtml:
-          'If you see content or behavior that violates these guidelines, use in-app reporting where available. You can also contact <a href="mailto:support@solveqo.com">support@solveqo.com</a> with the account email, job or chat context, and a description of what happened.',
-      },
-      {
-        title: 'Blocking',
-        bodyHtml:
-          'You can block users to prevent further interaction. Blocking is a personal safety tool; please also report serious or repeated violations so we can review them.',
-      },
-      {
-        title: 'Enforcement',
-        bodyHtml:
-          'SOLVEQO may warn, restrict, suspend, or permanently remove accounts that violate these guidelines, our Terms of Service, or applicable law. We may remove content, limit features, or take other action to protect users and the marketplace.',
-      },
-      {
-        title: 'Questions',
-        bodyHtml:
-          'For help or to report a concern, visit <a href="/en/support">Support</a> or email <a href="mailto:support@solveqo.com">support@solveqo.com</a>.',
-      },
-    ],
   },
   privacy: {
     meta: {
