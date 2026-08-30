@@ -1,5 +1,13 @@
 ---
-import { NAV_LINKS, SITE } from '../lib/site';
+import { getTranslations, localePath, type Locale } from '../i18n';
+import { SITE } from '../lib/site';
+
+type Props = {
+  locale: Locale;
+};
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
 ---
 
 <footer class="site-footer">
@@ -7,7 +15,7 @@ import { NAV_LINKS, SITE } from '../lib/site';
     <div>
       <strong>{SITE.name}</strong>
       <p style="margin: 0.75rem 0 0; max-width: 28rem; color: #bfdbfe;">
-        {SITE.tagline} Local services marketplace connecting customers and professionals.
+        {t.home.tagline} {t.footerTagline}
       </p>
       <p style="margin: 1rem 0 0;">
         <a href={`mailto:${SITE.supportEmail}`}>{SITE.supportEmail}</a>
@@ -15,13 +23,13 @@ import { NAV_LINKS, SITE } from '../lib/site';
     </div>
     <div class="footer-links">
       {
-        NAV_LINKS.map((link) => (
-          <a href={link.href}>{link.label}</a>
+        t.nav.map((link) => (
+          <a href={localePath(locale, link.route)}>{link.label}</a>
         ))
       }
     </div>
   </div>
   <div class="container footer-meta">
-    © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+    © {new Date().getFullYear()} {SITE.name}. {t.footerRights}
   </div>
 </footer>

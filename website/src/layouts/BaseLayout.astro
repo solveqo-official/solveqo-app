@@ -1,20 +1,66 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE, canonicalUrl, type PageMeta } from '../lib/site';
+import {
+  canonicalForRoute,
+  getTranslations,
+  hreflangLinks,
+  localePath,
+  type Locale,
+  type RouteKey,
+} from '../i18n';
+import { SITE } from '../lib/site';
 import '../styles/global.css';
 
 type Props = {
-  meta: PageMeta;
+  locale: Locale;
+  route: RouteKey;
   reviewNotice?: string;
 };
 
-const { meta, reviewNotice } = Astro.props;
-const canonical = canonicalUrl(meta.path);
+const { locale, route, reviewNotice } = Astro.props;
+const t = getTranslations(locale);
+const path = localePath(locale, route);
+const canonical = canonicalForRoute(SITE.url, locale, route);
+const alternates = hreflangLinks(SITE.url, route);
+
+const meta = {
+  title: '',
+  description: '',
+  path,
+};
+
+switch (route) {
+  case 'home':
+    meta.title = t.home.meta.title;
+    meta.description = t.home.meta.description;
+    break;
+  case 'privacy':
+    meta.title = t.privacy.meta.title;
+    meta.description = t.privacy.meta.description;
+    break;
+  case 'terms':
+    meta.title = t.terms.meta.title;
+    meta.description = t.terms.meta.description;
+    break;
+  case 'support':
+    meta.title = t.support.meta.title;
+    meta.description = t.support.meta.description;
+    break;
+  case 'deleteAccount':
+    meta.title = t.deleteAccount.meta.title;
+    meta.description = t.deleteAccount.meta.description;
+    break;
+  case 'communityGuidelines':
+    meta.title = t.communityGuidelines.meta.title;
+    meta.description = t.communityGuidelines.meta.description;
+    break;
+}
+
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,8 +68,12 @@ const canonical = canonicalUrl(meta.path);
     <title>{meta.title}</title>
     <meta name="description" content={meta.description} />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="sk" href={alternates.sk} />
+    <link rel="alternate" hreflang="en" href={alternates.en} />
+    <link rel="alternate" hreflang="x-default" href={alternates.xDefault} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:locale" content={locale === 'sk' ? 'sk_SK' : 'en_US'} />
     <meta property="og:title" content={meta.title} />
     <meta property="og:description" content={meta.description} />
     <meta property="og:url" content={canonical} />
@@ -35,7 +85,7 @@ const canonical = canonicalUrl(meta.path);
     <meta name="theme-color" content={SITE.brandColor} />
   </head>
   <body>
-    <Header currentPath={meta.path} />
+    <Header locale={locale} route={route} />
     <main>
       {
         reviewNotice && (
@@ -48,13 +98,42 @@ const canonical = canonicalUrl(meta.path);
       }
       <slot />
     </main>
-    <Footer />
-    <script is:inline>
+    <Footer locale={locale} />
+    <script is:inline define:vars={{ storageKey: SITE.langStorageKey }}>
       const toggle = document.querySelector('[data-nav-toggle]');
       const nav = document.querySelector('[data-site-nav]');
       toggle?.addEventListener('click', () => {
         nav?.classList.toggle('is-open');
       });
+
+      document.querySelectorAll('[data-set-lang]').forEach((element) => {
+        element.addEventListener('click', () => {
+          const lang = element.getAttribute('data-set-lang');
+          if (lang === 'sk' || lang === 'en') {
+            localStorage.setItem(storageKey, lang);
+          }
+        });
+      });
     </script>
+    {
+      locale === 'sk' && route === 'home' && (
+        <script is:inline define:vars={{ storageKey: SITE.langStorageKey, enHome: localePath('en', 'home') }}>
+          (function () {
+            const pref = localStorage.getItem(storageKey);
+            if (pref === 'en') {
+              window.location.replace(enHome);
+              return;
+            }
+            if (pref === 'sk') {
+              return;
+            }
+            const lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            if (!lang.startsWith('sk')) {
+              window.location.replace(enHome);
+            }
+          })();
+        </script>
+      )
+    }
   </body>
 </html>

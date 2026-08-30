@@ -1,32 +1,5 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { loadLegalMarkdown, renderLegalMarkdown } from '../lib/legalMarkdown';
-import { SITE } from '../lib/site';
-
-const meta = {
-  title: `Privacy Policy — ${SITE.name}`,
-  description:
-    'Learn how SOLVEQO handles personal data in the mobile app and on solveqo.com. Contact support@solveqo.com with privacy questions.',
-  path: '/privacy',
-};
-
-const reviewNotice =
-  'This Privacy Policy is being updated to reflect recent changes to SOLVEQO, including phone privacy, safety features, storage access, account deletion, and subscription handling. Contact support@solveqo.com if you have questions before the updated version is published.';
-
-const html = renderLegalMarkdown(loadLegalMarkdown('privacy-policy.md'));
+import PrivacyPage from '../components/pages/PrivacyPage.astro';
 ---
 
-<BaseLayout meta={meta} reviewNotice={reviewNotice}>
-  <section class="page-shell">
-    <div class="container container--narrow">
-      <header class="page-header">
-        <h1>Privacy Policy</h1>
-        <p>
-          How SOLVEQO collects, uses, and protects personal data when you use our mobile app and
-          related services.
-        </p>
-      </header>
-      <article class="prose" set:html={html} />
-    </div>
-  </section>
-</BaseLayout>
+<PrivacyPage locale="sk" />

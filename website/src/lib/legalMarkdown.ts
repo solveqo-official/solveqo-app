@@ -1,13 +1,22 @@
 import { marked } from 'marked';
-import privacyPolicy from '../data/legal/privacy-policy.md?raw';
-import termsOfService from '../data/legal/terms-of-service.md?raw';
+import type { Locale } from '../i18n/types';
+import privacyPolicyEn from '../data/legal/privacy-policy.md?raw';
+import privacyPolicySk from '../data/legal/privacy-policy.sk.md?raw';
+import termsOfServiceEn from '../data/legal/terms-of-service.md?raw';
+import termsOfServiceSk from '../data/legal/terms-of-service.sk.md?raw';
 
-const LEGAL_SOURCES = {
-  'privacy-policy.md': privacyPolicy,
-  'terms-of-service.md': termsOfService,
-} as const;
+export type LegalDocument = 'privacy-policy.md' | 'terms-of-service.md';
 
-export type LegalMarkdownFile = keyof typeof LEGAL_SOURCES;
+const LEGAL_SOURCES: Record<Locale, Record<LegalDocument, string>> = {
+  en: {
+    'privacy-policy.md': privacyPolicyEn,
+    'terms-of-service.md': termsOfServiceEn,
+  },
+  sk: {
+    'privacy-policy.md': privacyPolicySk,
+    'terms-of-service.md': termsOfServiceSk,
+  },
+};
 
 /** Remove lines containing unresolved legal placeholders before public render. */
 export function sanitizeLegalMarkdown(raw: string): string {
@@ -22,8 +31,8 @@ export function sanitizeLegalMarkdown(raw: string): string {
   return withoutPlaceholders;
 }
 
-export function loadLegalMarkdown(filename: LegalMarkdownFile): string {
-  const raw = LEGAL_SOURCES[filename];
+export function loadLegalMarkdown(filename: LegalDocument, locale: Locale): string {
+  const raw = LEGAL_SOURCES[locale][filename];
   return sanitizeLegalMarkdown(raw);
 }
 

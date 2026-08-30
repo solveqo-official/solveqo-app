@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../i18n';
+import { loadLegalMarkdown, renderLegalMarkdown } from '../../lib/legalMarkdown';
+
+type Props = {
+  locale: Locale;
+};
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+const html = renderLegalMarkdown(loadLegalMarkdown('privacy-policy.md', locale));
+---
+
+<BaseLayout locale={locale} route="privacy" reviewNotice={t.privacy.reviewNotice}>
+  <section class="page-shell">
+    <div class="container container--narrow">
+      <header class="page-header">
+        <h1>{t.privacy.meta.heading}</h1>
+        <p>{t.privacy.meta.intro}</p>
+      </header>
+      <article class="prose" set:html={html} />
+    </div>
+  </section>
+</BaseLayout>

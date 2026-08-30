@@ -1,29 +1,59 @@
 ---
-import { NAV_LINKS, SITE } from '../lib/site';
+import { getTranslations, localePath, type Locale, type RouteKey } from '../i18n';
+import { SITE } from '../lib/site';
 
 type Props = {
-  currentPath: string;
+  locale: Locale;
+  route: RouteKey;
 };
 
-const { currentPath } = Astro.props;
+const { locale, route } = Astro.props;
+const t = getTranslations(locale);
+const homePath = localePath(locale, 'home');
+const skPath = localePath('sk', route);
+const enPath = localePath('en', route);
 ---
 
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="brand" href="/">
+    <a class="brand" href={homePath}>
       <img class="brand__mark" src="/branding/pin-solveqo.png" alt="" width="40" height="40" />
       <span class="brand__name">{SITE.name}</span>
     </a>
-    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
-      Menu
-    </button>
+    <div class="site-header__actions">
+      <div class="lang-switch" aria-label="Language">
+        <a
+          href={skPath}
+          class:list={['lang-switch__btn', { 'is-active': locale === 'sk' }]}
+          hreflang="sk"
+          lang="sk"
+          data-set-lang="sk"
+          aria-current={locale === 'sk' ? 'true' : undefined}>SK</a
+        >
+        <span class="lang-switch__sep" aria-hidden="true">/</span>
+        <a
+          href={enPath}
+          class:list={['lang-switch__btn', { 'is-active': locale === 'en' }]}
+          hreflang="en"
+          lang="en"
+          data-set-lang="en"
+          aria-current={locale === 'en' ? 'true' : undefined}>EN</a
+        >
+      </div>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        {t.menu}
+      </button>
+    </div>
     <nav id="site-nav" class="site-nav" data-site-nav aria-label="Primary">
       {
-        NAV_LINKS.map((link) => (
-          <a href={link.href} aria-current={currentPath === link.href ? 'page' : undefined}>
-            {link.label}
-          </a>
-        ))
+        t.nav.map((link) => {
+          const href = localePath(locale, link.route);
+          return (
+            <a href={href} aria-current={route === link.route ? 'page' : undefined}>
+              {link.label}
+            </a>
+          );
+        })
       }
     </nav>
   </div>

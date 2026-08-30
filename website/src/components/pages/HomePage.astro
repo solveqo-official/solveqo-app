@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations, type Locale } from '../../i18n';
+import { SITE } from '../../lib/site';
+
+type Props = {
+  locale: Locale;
+};
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+---
+
+<BaseLayout locale={locale} route="home">
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <p class="eyebrow">{t.home.eyebrow}</p>
+        <h1>{SITE.name}</h1>
+        <p class="hero__tagline">{t.home.tagline}</p>
+        <p class="hero__lead">{t.home.lead1}</p>
+        <p class="hero__lead">{t.home.lead2}</p>
+      </div>
+      <aside class="hero-card" aria-label={t.home.heroCardAria}>
+        <img
+          class="hero-card__logo"
+          src="/branding/pin-solveqo.png"
+          alt="SOLVEQO logo"
+          width="88"
+          height="88"
+        />
+        <h2>{t.home.heroCardTitle}</h2>
+        <p>{t.home.heroCardBody}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="container feature-grid" aria-label={t.home.featuresAria}>
+    <article class="feature-card">
+      <h3>{t.home.feature1Title}</h3>
+      <p>{t.home.feature1Body}</p>
+    </article>
+    <article class="feature-card">
+      <h3>{t.home.feature2Title}</h3>
+      <p>{t.home.feature2Body}</p>
+    </article>
+    <article class="feature-card">
+      <h3>{t.home.feature3Title}</h3>
+      <p>{t.home.feature3Body}</p>
+    </article>
+  </section>
+
+  <section class="container cta-strip">
+    <h2>{t.home.ctaTitle}</h2>
+    <p set:html={t.home.ctaBodyHtml} />
+  </section>
+</BaseLayout>

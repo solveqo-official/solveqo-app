@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations, localePath, type Locale } from '../../i18n';
+import { SITE } from '../../lib/site';
+
+type Props = {
+  locale: Locale;
+};
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+---
+
+<BaseLayout locale={locale} route="deleteAccount">
+  <section class="page-shell">
+    <div class="container container--narrow">
+      <header class="page-header">
+        <h1>{t.deleteAccount.meta.heading}</h1>
+        <p>{t.deleteAccount.meta.intro}</p>
+      </header>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <h2>{t.deleteAccount.inAppTitle}</h2>
+          <p>{t.deleteAccount.inAppIntro}</p>
+          <ol>
+            {t.deleteAccount.inAppSteps.map((step) => <li>{step}</li>)}
+          </ol>
+          <p set:html={t.deleteAccount.inAppNoteHtml} />
+        </article>
+
+        <article class="info-card warning-card">
+          <h2>{t.deleteAccount.subscriptionTitle}</h2>
+          <p set:html={t.deleteAccount.subscriptionWarningHtml} />
+          <p>{t.deleteAccount.subscriptionBody}</p>
+          <ul>
+            <li>{t.deleteAccount.subscriptionApple}</li>
+            <li>{t.deleteAccount.subscriptionGoogle}</li>
+          </ul>
+          <p set:html={t.deleteAccount.subscriptionManageHtml} />
+        </article>
+
+        <article class="info-card">
+          <h2>{t.deleteAccount.noAccessTitle}</h2>
+          <p set:html={t.deleteAccount.noAccessBody1Html} />
+          <p>{t.deleteAccount.noAccessBody2}</p>
+        </article>
+
+        <article class="info-card">
+          <h2>{t.deleteAccount.afterTitle}</h2>
+          <ul>
+            {t.deleteAccount.afterItems.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+
+        <article class="info-card">
+          <h2>{t.deleteAccount.relatedTitle}</h2>
+          <div class="link-list">
+            <a href={localePath(locale, 'privacy')}>{t.deleteAccount.relatedPrivacy}</a>
+            <a href={localePath(locale, 'terms')}>{t.deleteAccount.relatedTerms}</a>
+            <a href={localePath(locale, 'support')}>{t.deleteAccount.relatedSupport}</a>
+            <a href={`mailto:${SITE.supportEmail}`}>{SITE.supportEmail}</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations, localePath, type Locale } from '../../i18n';
+
+type Props = {
+  locale: Locale;
+};
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+---
+
+<BaseLayout locale={locale} route="support">
+  <section class="page-shell">
+    <div class="container container--narrow">
+      <header class="page-header">
+        <h1>{t.support.meta.heading}</h1>
+        <p>{t.support.meta.intro}</p>
+      </header>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <h2>{t.support.contactTitle}</h2>
+          <p set:html={t.support.contactBodyHtml} />
+        </article>
+
+        <article class="info-card">
+          <h2>{t.support.accountTitle}</h2>
+          <ul>
+            {t.support.accountItems.map((item) => <li>{item}</li>)}
+          </ul>
+          <p set:html={t.support.accountNoteHtml} />
+        </article>
+
+        <article class="info-card">
+          <h2>{t.support.safetyTitle}</h2>
+          <p>{t.support.safetyBody1}</p>
+          <p set:html={t.support.safetyBody2Html} />
+        </article>
+
+        <article class="info-card">
+          <h2>{t.support.subscriptionTitle}</h2>
+          <p set:html={t.support.subscriptionBody1Html} />
+          <p set:html={t.support.subscriptionBody2Html} />
+        </article>
+
+        <article class="info-card">
+          <h2>{t.support.deletionTitle}</h2>
+          <p set:html={t.support.deletionBodyHtml} />
+          <div class="link-list">
+            <a href={localePath(locale, 'deleteAccount')}>{t.support.deletionLink}</a>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <h2>{t.support.legalTitle}</h2>
+          <div class="link-list">
+            <a href={localePath(locale, 'privacy')}>{t.support.legalPrivacy}</a>
+            <a href={localePath(locale, 'terms')}>{t.support.legalTerms}</a>
+            <a href={localePath(locale, 'communityGuidelines')}>{t.support.legalGuidelines}</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

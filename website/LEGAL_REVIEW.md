@@ -4,8 +4,8 @@ The website infrastructure is live-ready. The following pages require legal revi
 
 | Page | Source | Status |
 |------|--------|--------|
-| `/privacy` | `website/src/data/legal/privacy-policy.md` (bundled + sanitized at build) | **Needs review** — does not yet reflect phone privacy, reporting/blocking, job-photo storage privacy, account deletion, or RevenueCat handling |
-| `/terms` | `website/src/data/legal/terms-of-service.md` (bundled + sanitized at build) | **Needs review** — same recent product changes |
+| `/privacy` | `website/src/data/legal/privacy-policy(.sk).md` (bundled + sanitized) | **Needs review** — SK route uses interim EN body until legal translation is finalized |
+| `/terms` | `website/src/data/legal/terms-of-service(.sk).md` (bundled + sanitized) | **Needs review** — SK route uses interim EN body until legal translation is finalized |
 | `/delete-account` | `website` inline copy | Production-ready for App Store compliance |
 | `/community-guidelines` | `website` inline copy | Production-ready baseline; optional legal polish |
 | `/support` | `website` inline copy | Production-ready |
