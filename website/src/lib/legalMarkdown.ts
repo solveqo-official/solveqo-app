@@ -1,9 +1,13 @@
-import { readFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { marked } from 'marked';
+import privacyPolicy from '../data/legal/privacy-policy.md?raw';
+import termsOfService from '../data/legal/terms-of-service.md?raw';
 
-const repoRoot = join(dirname(fileURLToPath(import.meta.url)), '../../..');
+const LEGAL_SOURCES = {
+  'privacy-policy.md': privacyPolicy,
+  'terms-of-service.md': termsOfService,
+} as const;
+
+export type LegalMarkdownFile = keyof typeof LEGAL_SOURCES;
 
 /** Remove lines containing unresolved legal placeholders before public render. */
 export function sanitizeLegalMarkdown(raw: string): string {
@@ -18,9 +22,8 @@ export function sanitizeLegalMarkdown(raw: string): string {
   return withoutPlaceholders;
 }
 
-export function loadLegalMarkdown(relativePath: string): string {
-  const absolutePath = join(repoRoot, relativePath);
-  const raw = readFileSync(absolutePath, 'utf8');
+export function loadLegalMarkdown(filename: LegalMarkdownFile): string {
+  const raw = LEGAL_SOURCES[filename];
   return sanitizeLegalMarkdown(raw);
 }
 
