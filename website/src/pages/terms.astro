@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { loadLegalMarkdown, renderLegalMarkdown } from '../lib/legalMarkdown';
+import { SITE } from '../lib/site';
+
+const meta = {
+  title: `Terms of Service — ${SITE.name}`,
+  description:
+    'Terms governing use of the SOLVEQO mobile app and related services. Contact support@solveqo.com with questions.',
+  path: '/terms',
+};
+
+const reviewNotice =
+  'These Terms of Service are being updated to reflect recent changes to SOLVEQO, including safety features, storage access, account deletion, and subscription handling. Contact support@solveqo.com if you have questions before the updated version is published.';
+
+const html = renderLegalMarkdown(loadLegalMarkdown('legal/terms-of-service.md'));
+---
+
+<BaseLayout meta={meta} reviewNotice={reviewNotice}>
+  <section class="page-shell">
+    <div class="container container--narrow">
+      <header class="page-header">
+        <h1>Terms of Service</h1>
+        <p>Rules and expectations for using the SOLVEQO marketplace and related services.</p>
+      </header>
+      <article class="prose" set:html={html} />
+    </div>
+  </section>
+</BaseLayout>

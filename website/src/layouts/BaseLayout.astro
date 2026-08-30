@@ -1,0 +1,60 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE, canonicalUrl, type PageMeta } from '../lib/site';
+import '../styles/global.css';
+
+type Props = {
+  meta: PageMeta;
+  reviewNotice?: string;
+};
+
+const { meta, reviewNotice } = Astro.props;
+const canonical = canonicalUrl(meta.path);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{meta.title}</title>
+    <meta name="description" content={meta.description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${SITE.url}/branding/pin-solveqo.png`} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.description} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="theme-color" content={SITE.brandColor} />
+  </head>
+  <body>
+    <Header currentPath={meta.path} />
+    <main>
+      {
+        reviewNotice && (
+          <div class="container container--narrow" style="padding-top: 2rem;">
+            <div class="notice" role="note">
+              <p>{reviewNotice}</p>
+            </div>
+          </div>
+        )
+      }
+      <slot />
+    </main>
+    <Footer />
+    <script is:inline>
+      const toggle = document.querySelector('[data-nav-toggle]');
+      const nav = document.querySelector('[data-site-nav]');
+      toggle?.addEventListener('click', () => {
+        nav?.classList.toggle('is-open');
+      });
+    </script>
+  </body>
+</html>

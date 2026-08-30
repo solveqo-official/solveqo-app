@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://solveqo.com/sitemap-index.xml

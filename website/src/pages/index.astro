@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../lib/site';
+
+const meta = {
+  title: `${SITE.name} — ${SITE.tagline}`,
+  description:
+    'SOLVEQO connects people who need help with professionals who can solve the job. Post requests, receive offers, chat, and complete work locally.',
+  path: '/',
+};
+---
+
+<BaseLayout meta={meta}>
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <p class="eyebrow">Local services marketplace</p>
+        <h1>{SITE.name}</h1>
+        <p class="hero__tagline">{SITE.tagline}</p>
+        <p class="hero__lead">
+          SOLVEQO connects people who need help with professionals who can solve the job. Customers
+          post local requests, professionals respond with offers, and both sides coordinate through
+          chat until the work is done.
+        </p>
+        <p class="hero__lead">
+          The SOLVEQO mobile app is available on iOS and Android. This website provides support,
+          legal information, and account guidance.
+        </p>
+      </div>
+      <aside class="hero-card" aria-label="About SOLVEQO">
+        <img
+          class="hero-card__logo"
+          src="/branding/pin-solveqo.png"
+          alt="SOLVEQO logo"
+          width="88"
+          height="88"
+        />
+        <h2>How it works</h2>
+        <p>
+          Customers describe a job and location. Professionals browse nearby opportunities, send
+          offers, and communicate in-app. Reviews and reputation help build trust in the community.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="container feature-grid" aria-label="Platform highlights">
+    <article class="feature-card">
+      <h3>Post &amp; discover jobs</h3>
+      <p>Customers publish local requests. Professionals find work that matches their skills and area.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Offers &amp; chat</h3>
+      <p>Compare offers, accept the right professional, and coordinate details through in-app messaging.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Trust &amp; safety tools</h3>
+      <p>Reporting, blocking, and community guidelines help keep the marketplace respectful and useful.</p>
+    </article>
+  </section>
+
+  <section class="container cta-strip">
+    <h2>Need help with your account?</h2>
+    <p>
+      Visit our <a href="/support">Support center</a>, read the
+      <a href="/community-guidelines">Community guidelines</a>, or email
+      <a href={`mailto:${SITE.supportEmail}`}>{SITE.supportEmail}</a>.
+    </p>
+  </section>
+</BaseLayout>

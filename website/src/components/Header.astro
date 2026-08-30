@@ -1,0 +1,30 @@
+---
+import { NAV_LINKS, SITE } from '../lib/site';
+
+type Props = {
+  currentPath: string;
+};
+
+const { currentPath } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/">
+      <img class="brand__mark" src="/branding/pin-solveqo.png" alt="" width="40" height="40" />
+      <span class="brand__name">{SITE.name}</span>
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+      Menu
+    </button>
+    <nav id="site-nav" class="site-nav" data-site-nav aria-label="Primary">
+      {
+        NAV_LINKS.map((link) => (
+          <a href={link.href} aria-current={currentPath === link.href ? 'page' : undefined}>
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>

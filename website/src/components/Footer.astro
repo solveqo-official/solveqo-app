@@ -1,0 +1,27 @@
+---
+import { NAV_LINKS, SITE } from '../lib/site';
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>{SITE.name}</strong>
+      <p style="margin: 0.75rem 0 0; max-width: 28rem; color: #bfdbfe;">
+        {SITE.tagline} Local services marketplace connecting customers and professionals.
+      </p>
+      <p style="margin: 1rem 0 0;">
+        <a href={`mailto:${SITE.supportEmail}`}>{SITE.supportEmail}</a>
+      </p>
+    </div>
+    <div class="footer-links">
+      {
+        NAV_LINKS.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))
+      }
+    </div>
+  </div>
+  <div class="container footer-meta">
+    © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+  </div>
+</footer>

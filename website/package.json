@@ -1,0 +1,19 @@
+{
+  "name": "solveqo-website",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.3.1",
+    "astro": "^5.7.10",
+    "marked": "^15.0.12"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
