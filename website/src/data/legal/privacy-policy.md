@@ -1,6 +1,7 @@
 # SOLVEQO Privacy Policy
 
-**Last updated:** 30 August 2026  
+**Last updated:** 29 September 2026
+
 **Applies to:** the SOLVEQO mobile application (iOS and Android), related account and backend services, and the public website at [https://solveqo.com](https://solveqo.com).
 
 ---
@@ -8,6 +9,8 @@
 ## 1. Who we are
 
 **Data controller:** Andrej Gašperík, operating SOLVEQO as an individual operator.
+
+**Public contact address:** Kopaničná 1083/25, 976 52 Čierny Balog, Slovakia.
 
 **Privacy contact:** [support@solveqo.com](mailto:support@solveqo.com)
 
@@ -140,16 +143,19 @@ Push delivery may involve Apple Push Notification service (APNs), Firebase Cloud
 
 We also store in-app notification preference settings, such as toggles for chat, jobs, reviews, marketing messages, and related email preferences where available.
 
-### 3.10 Subscription and entitlement data
+### 3.10 Purchase, subscription and entitlement data
 
-If you subscribe to SOLVEQO Pro, we and our subscription providers may process:
+If you subscribe to SOLVEQO Pro or buy Priority promotion, we and our purchase providers may process:
 
 - subscription status and entitlement status;
 - app user/customer identifiers linked to your SOLVEQO account;
 - store transaction or subscription identifiers from Apple or Google;
-- webhook and entitlement records needed to provide Pro features.
+- webhook and entitlement records needed to provide Pro features;
+- the job linked to a Priority transaction and its consumption, refund or revocation status.
 
 SOLVEQO does **not** receive full payment card numbers from Apple or Google for these subscriptions.
+
+We also store the version and acceptance time of the Terms and Community Guidelines, linked to the account and removed when the account is deleted.
 
 ### 3.11 Technical, local, and support data
 
@@ -228,7 +234,7 @@ We use trusted providers to operate SOLVEQO, including:
 | Provider | Role |
 |----------|------|
 | **Supabase** | Authentication, database, storage, realtime messaging, backend functions, and related infrastructure |
-| **RevenueCat** | Subscription and entitlement management |
+| **RevenueCat** | Purchase, subscription and entitlement management |
 | **Expo / EAS** | App infrastructure and push notification relay |
 | **Apple** | App Store distribution, iOS push delivery (APNs), and Apple-managed subscriptions |
 | **Google** | Google Play distribution, Android push delivery (FCM), and Google-managed subscriptions |
@@ -303,13 +309,13 @@ When you delete your account, we aim to:
 - delete your Supabase authentication account;
 - delete or anonymize applicable account-linked database records according to our deletion workflow;
 - remove your files from applicable Supabase Storage areas, including avatars, portfolio items, and job photos linked to your account, where paths are identifiable;
-- send a best-effort request to RevenueCat to delete the associated customer record.
+- confirm deletion of the associated RevenueCat customer record before completing account deletion.
 
 **Important limitations:**
 
 - Deleting your SOLVEQO account does **not** automatically cancel an active SOLVEQO Pro subscription billed through Apple App Store or Google Play. You must manage or cancel store subscriptions separately in your Apple or Google account.
 - Deletion from backups, logs, third-party systems, or provider replicas may take additional time and is not always instantaneous.
-- RevenueCat deletion is **best-effort** and may not guarantee immediate removal from every third-party backup or downstream system maintained by providers.
+- If RevenueCat deletion cannot be confirmed, the app reports incomplete deletion and allows a retry. Some photos may already have been deleted. Provider backups and legal retention remain subject to their policies.
 - Some information may be retained where required by law or reasonably necessary for safety, dispute resolution, or enforcement purposes.
 
 For more guidance, see [https://solveqo.com/en/delete-account](https://solveqo.com/en/delete-account).

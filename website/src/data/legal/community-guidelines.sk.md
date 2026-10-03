@@ -5,6 +5,8 @@
 
 **Prevádzkovateľ:** Andrej Gašperík, prevádzkujúci SOLVEQO ako fyzická osoba.
 
+**Verejná kontaktná adresa:** Kopaničná 1083/25, 976 52 Čierny Balog, Slovensko.
+
 **Kontakt:** [support@solveqo.com](mailto:support@solveqo.com)
 
 ---

@@ -1,6 +1,7 @@
 # Podmienky používania SOLVEQO
 
-**Posledná aktualizácia:** 30. august 2026  
+**Posledná aktualizácia:** 29. september 2026
+
 **Platí pre:** mobilnú aplikáciu SOLVEQO (iOS a Android), súvisiace účtové a backendové služby a verejnú webovú stránku [https://solveqo.com](https://solveqo.com).
 
 ---
@@ -10,6 +11,8 @@
 Tieto Podmienky používania („**Podmienky**“) upravujú váš prístup k SOLVEQO a jeho používanie.
 
 **Prevádzkovateľ:** Andrej Gašperík, prevádzkujúci SOLVEQO ako fyzická osoba.
+
+**Verejná kontaktná adresa:** Kopaničná 1083/25, 976 52 Čierny Balog, Slovensko.
 
 **Kontakt:** [support@solveqo.com](mailto:support@solveqo.com)
 
@@ -194,6 +197,14 @@ Ak predplatné vyprší, bude zrušené alebo sa neobnoví, Pro funkcie môžu p
 **Vymazanie účtu SOLVEQO automaticky nezruší aktívne predplatné SOLVEQO Pro fakturované cez Apple alebo Google.** Predplatné musíte zrušiť samostatne vo svojom účte Apple alebo Google, aby ste predišli ďalším poplatkom.
 
 Viac informácií nájdete na stránke [Vymazanie účtu](https://solveqo.com/delete-account).
+
+---
+
+### 8.6 Jednorazové zvýraznenie Priority
+
+Priority je voliteľný **jednorazový digitálny nákup** pre jednu požiadavku na prácu. Po overení nákupu je požiadavka označená odznakom Priority a zoradená pred bežnými požiadavkami v podporovaných zoznamoch. Nezaručuje prijatie ponuky, počet zobrazení ani vykonanie práce. Nejde o platbu Profesionálovi ani o predplatné Pro.
+
+Aktuálna cena sa zobrazí v aplikácii a v potvrdení Apple App Store alebo Google Play pred nákupom. Priority sa automaticky neobnovuje. Jeden overený nákup možno použiť len na jednu požiadavku. Ak sa publikovanie preruší, aplikácia umožní pokračovať v existujúcom nákupe; nekupujte znova, kým sa jeho stav neoverí. Pri probléme kontaktujte support@solveqo.com. Vrátenie peňazí sa riadi pravidlami príslušného obchodu a povinným spotrebiteľským právom. Refundovaný alebo odvolaný nákup stráca zvýraznenie.
 
 ---
 

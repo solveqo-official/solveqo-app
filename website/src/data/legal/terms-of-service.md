@@ -1,6 +1,7 @@
 # SOLVEQO Terms of Service
 
-**Last updated:** 30 August 2026  
+**Last updated:** 29 September 2026
+
 **Applies to:** the SOLVEQO mobile application (iOS and Android), related account and backend services, and the public website at [https://solveqo.com](https://solveqo.com).
 
 ---
@@ -10,6 +11,8 @@
 These Terms of Service (“**Terms**”) govern your access to and use of SOLVEQO.
 
 **Operator:** Andrej Gašperík, operating SOLVEQO as an individual operator.
+
+**Public contact address:** Kopaničná 1083/25, 976 52 Čierny Balog, Slovakia.
 
 **Contact:** [support@solveqo.com](mailto:support@solveqo.com)
 
@@ -194,6 +197,14 @@ If a subscription expires, is cancelled, or is not renewed, Pro features may sto
 **Deleting your SOLVEQO account does not automatically cancel an active SOLVEQO Pro subscription billed through Apple or Google.** You must cancel the subscription separately in your Apple or Google account to avoid future charges.
 
 See [Account deletion](https://solveqo.com/en/delete-account) for more information.
+
+---
+
+### 8.6 One-time Priority promotion
+
+Priority is an optional **one-time digital purchase** for a single job request. Once verified, the request receives a Priority badge and appears before standard requests in supported lists. It does not guarantee offers, views or completion of the work. It is neither payment to a professional nor a Pro subscription.
+
+The current price is shown in the app and in the Apple App Store or Google Play confirmation before purchase. Priority does not renew automatically. Each verified purchase can be used for only one request. If publishing is interrupted, the app can resume that purchase; do not buy again until its status has been checked. Contact support@solveqo.com for assistance. Refunds follow the applicable store rules and mandatory consumer law. Refunded or revoked purchases lose their promotion.
 
 ---
 

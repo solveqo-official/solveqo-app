@@ -5,6 +5,8 @@
 
 **Operator:** Andrej Gašperík, operating SOLVEQO as an individual operator.
 
+**Public contact address:** Kopaničná 1083/25, 976 52 Čierny Balog, Slovakia.
+
 **Contact:** [support@solveqo.com](mailto:support@solveqo.com)
 
 ---

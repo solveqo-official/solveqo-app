@@ -1,6 +1,7 @@
 # Zásady ochrany osobných údajov SOLVEQO
 
-**Posledná aktualizácia:** 30. august 2026  
+**Posledná aktualizácia:** 29. september 2026
+
 **Platí pre:** mobilnú aplikáciu SOLVEQO (iOS a Android), súvisiace účtové a backendové služby a verejnú webovú stránku [https://solveqo.com](https://solveqo.com).
 
 ---
@@ -8,6 +9,8 @@
 ## 1. Kto sme
 
 **Prevádzkovateľ údajov:** Andrej Gašperík, prevádzkujúci SOLVEQO ako fyzická osoba.
+
+**Verejná kontaktná adresa:** Kopaničná 1083/25, 976 52 Čierny Balog, Slovensko.
 
 **Kontakt pre otázky ochrany súkromia:** [support@solveqo.com](mailto:support@solveqo.com)
 
@@ -140,16 +143,19 @@ Doručovanie push notifikácií môže zahŕňať Apple Push Notification servic
 
 Ukladáme aj nastavenia preferencií notifikácií v aplikácii, napríklad prepínače pre chat, práce, recenzie, marketingové správy a súvisiace e-mailové preferencie, ak sú k dispozícii.
 
-### 3.10 Údaje o predplatnom a oprávneniach
+### 3.10 Údaje o nákupoch, predplatnom a oprávneniach
 
-Ak si predplatíte SOLVEQO Pro, my a naši poskytovatelia predplatného môžeme spracúvať:
+Ak si predplatíte SOLVEQO Pro alebo kúpite zvýraznenie Priority, my a naši poskytovatelia nákupov môžeme spracúvať:
 
 - stav predplatného a stav oprávnení;
 - identifikátory používateľa/zákazníka aplikácie prepojené s vaším účtom SOLVEQO;
 - identifikátory transakcií alebo predplatného z Apple alebo Google;
-- záznamy webhookov a oprávnení potrebné na poskytovanie Pro funkcií.
+- záznamy webhookov a oprávnení potrebné na poskytovanie Pro funkcií;
+- identifikátor práce spojenej s nákupom Priority a stav použitia, refundácie alebo odvolania nákupu.
 
 SOLVEQO **nedostáva** úplné čísla platobných kariet od Apple alebo Google za tieto predplatné.
+
+Ukladáme aj verziu prijatých podmienok a pravidiel komunity a čas ich prijatia; záznam je spojený s účtom a pri vymazaní účtu sa odstráni.
 
 ### 3.11 Technické, lokálne a podporné údaje
 
@@ -195,7 +201,7 @@ Ak sa uplatňuje GDPR alebo podobné predpisy, pri spracúvaní sa opierame o je
 | Spracúvanie | Typický právny základ |
 |-------------|------------------------|
 | Poskytovanie účtov, prác, ponúk, chatu, recenzií a základných funkcií trhu | **Plnenie zmluvy** |
-| Správa predplatného a oprávnení | **Plnenie zmluvy** |
+| Správa nákupov, predplatného a oprávnení | **Plnenie zmluvy** |
 | Bezpečnosť, prevencia podvodov, riešenie zneužitia, spoľahlivosť služby a moderovanie | **Oprávnený záujem** (vyvážený voči vašim právam) |
 | Plnenie zákonných povinností | **Zákonná povinnosť** |
 | Voliteľné povolenia zariadenia (napr. poloha, prístup k fotografiám/médiám, notifikácie) | **Súhlas** cez zariadenie alebo voľby v aplikácii, ak sa vyžaduje |
@@ -228,7 +234,7 @@ Na prevádzku SOLVEQO využívame dôveryhodných poskytovateľov, vrátane:
 | Poskytovateľ | Úloha |
 |--------------|-------|
 | **Supabase** | Autentifikácia, databáza, úložisko, realtime správy, backendové funkcie a súvisiaca infraštruktúra |
-| **RevenueCat** | Správa predplatného a oprávnení |
+| **RevenueCat** | Správa nákupov, predplatného a oprávnení |
 | **Expo / EAS** | Infraštruktúra aplikácie a sprostredkovanie push notifikácií |
 | **Apple** | Distribúcia v App Store, doručovanie push na iOS (APNs) a predplatné spravované Apple |
 | **Google** | Distribúcia v Google Play, doručovanie push na Android (FCM) a predplatné spravované Google |
@@ -303,13 +309,13 @@ Keď účet vymažete, usilujeme sa:
 - vymazať váš autentifikačný účet v Supabase;
 - vymazať alebo anonymizovať príslušné záznamy v databáze prepojené s účtom podľa nášho procesu vymazania;
 - odstrániť vaše súbory z príslušných oblastí Supabase Storage vrátane avatarov, portfólia a fotografií prác prepojených s vaším účtom, ak sú cesty identifikovateľné;
-- odoslať best-effort požiadavku do RevenueCat na vymazanie príslušného záznamu zákazníka.
+- potvrdiť vymazanie príslušného záznamu zákazníka v RevenueCat pred dokončením vymazania účtu.
 
 **Dôležité obmedzenia:**
 
-- Vymazanie účtu SOLVEQO **ne zruší automaticky** aktívne predplatné SOLVEQO Pro fakturované cez Apple App Store alebo Google Play. Predplatné musíte spravovať alebo zrušiť samostatne vo svojom účte Apple alebo Google.
+- Vymazanie účtu SOLVEQO **nezruší automaticky** aktívne predplatné SOLVEQO Pro fakturované cez Apple App Store alebo Google Play. Predplatné musíte spravovať alebo zrušiť samostatne vo svojom účte Apple alebo Google.
 - Vymazanie zo záloh, logov, systémov tretích strán alebo replík poskytovateľov môže trvať dlhšie a nie vždy je okamžité.
-- Vymazanie v RevenueCat je **best-effort** a nemusí zaručiť okamžité odstránenie zo všetkých záloh alebo downstream systémov udržiavaných poskytovateľmi.
+- Ak sa vymazanie v RevenueCat nedá potvrdiť, aplikácia neoznámi úplné vymazanie účtu a umožní opakovanie pokusu. Časť fotografií už môže byť vymazaná. Zálohy a zákonné uchovávanie údajov u poskytovateľov sa riadia ich pravidlami.
 - Niektoré informácie môžu byť uchované, ak to vyžaduje zákon alebo je to primerane potrebné na bezpečnosť, riešenie sporov alebo vynucovanie pravidiel.
 
 Viac informácií nájdete na [https://solveqo.com/delete-account](https://solveqo.com/delete-account).
