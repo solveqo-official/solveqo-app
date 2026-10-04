@@ -1,6 +1,6 @@
 # Podmienky používania SOLVEQO
 
-**Posledná aktualizácia:** 29. september 2026
+**Posledná aktualizácia:** 4. október 2026
 
 **Platí pre:** mobilnú aplikáciu SOLVEQO (iOS a Android), súvisiace účtové a backendové služby a verejnú webovú stránku [https://solveqo.com](https://solveqo.com).
 
@@ -200,11 +200,11 @@ Viac informácií nájdete na stránke [Vymazanie účtu](https://solveqo.com/de
 
 ---
 
-### 8.6 Jednorazové zvýraznenie Priority
+### 8.6 Bezplatný prístup počas testovania
 
-Priority je voliteľný **jednorazový digitálny nákup** pre jednu požiadavku na prácu. Po overení nákupu je požiadavka označená odznakom Priority a zoradená pred bežnými požiadavkami v podporovaných zoznamoch. Nezaručuje prijatie ponuky, počet zobrazení ani vykonanie práce. Nejde o platbu Profesionálovi ani o predplatné Pro.
+Pozvaní testeri môžu získať časovo obmedzený bezplatný prístup k SOLVEQO Pro. Dátum skončenia prístupu sa zobrazuje v aplikácii. Nejde o platené predplatné, prístup sa automaticky neobnovuje a nevznikne automatická platba. Prípadné neskoršie platené predplatné vyžaduje samostatný výslovný nákup.
 
-Aktuálna cena sa zobrazí v aplikácii a v potvrdení Apple App Store alebo Google Play pred nákupom. Priority sa automaticky neobnovuje. Jeden overený nákup možno použiť len na jednu požiadavku. Ak sa publikovanie preruší, aplikácia umožní pokračovať v existujúcom nákupe; nekupujte znova, kým sa jeho stav neoverí. Pri probléme kontaktujte support@solveqo.com. Vrátenie peňazí sa riadi pravidlami príslušného obchodu a povinným spotrebiteľským právom. Refundovaný alebo odvolaný nákup stráca zvýraznenie.
+Zvýraznenie Priority bolo zrušené a v aktuálnej aplikácii sa už neponúka. Pri otázkach k skoršej transakcii kontaktujte support@solveqo.com.
 
 ---
 

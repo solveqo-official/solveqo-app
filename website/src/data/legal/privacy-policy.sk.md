@@ -145,13 +145,14 @@ Ukladáme aj nastavenia preferencií notifikácií v aplikácii, napríklad prep
 
 ### 3.10 Údaje o nákupoch, predplatnom a oprávneniach
 
-Ak si predplatíte SOLVEQO Pro alebo kúpite zvýraznenie Priority, my a naši poskytovatelia nákupov môžeme spracúvať:
+Ak si predplatíte SOLVEQO Pro, my a naši poskytovatelia nákupov môžeme spracúvať:
 
 - stav predplatného a stav oprávnení;
 - identifikátory používateľa/zákazníka aplikácie prepojené s vaším účtom SOLVEQO;
 - identifikátory transakcií alebo predplatného z Apple alebo Google;
 - záznamy webhookov a oprávnení potrebné na poskytovanie Pro funkcií;
-- identifikátor práce spojenej s nákupom Priority a stav použitia, refundácie alebo odvolania nákupu.
+- záznamy o skorších nákupoch zrušenej funkcie Priority, ak sú potrebné pre podporu alebo refundáciu;
+- overený e-mail účtu a dátumy prístupu pri bezplatnom testovaní Pro.
 
 SOLVEQO **nedostáva** úplné čísla platobných kariet od Apple alebo Google za tieto predplatné.
 

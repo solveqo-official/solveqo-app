@@ -1,6 +1,6 @@
 # SOLVEQO Terms of Service
 
-**Last updated:** 29 September 2026
+**Last updated:** 4 October 2026
 
 **Applies to:** the SOLVEQO mobile application (iOS and Android), related account and backend services, and the public website at [https://solveqo.com](https://solveqo.com).
 
@@ -200,11 +200,11 @@ See [Account deletion](https://solveqo.com/en/delete-account) for more informati
 
 ---
 
-### 8.6 One-time Priority promotion
+### 8.6 Complimentary testing access
 
-Priority is an optional **one-time digital purchase** for a single job request. Once verified, the request receives a Priority badge and appears before standard requests in supported lists. It does not guarantee offers, views or completion of the work. It is neither payment to a professional nor a Pro subscription.
+Invited testers may receive time-limited SOLVEQO Pro access free of charge. The access end date is shown in the app. This access is not a paid subscription, does not automatically renew and does not result in an automatic charge. A later paid subscription requires a separate, explicit purchase.
 
-The current price is shown in the app and in the Apple App Store or Google Play confirmation before purchase. Priority does not renew automatically. Each verified purchase can be used for only one request. If publishing is interrupted, the app can resume that purchase; do not buy again until its status has been checked. Contact support@solveqo.com for assistance. Refunds follow the applicable store rules and mandatory consumer law. Refunded or revoked purchases lose their promotion.
+Priority promotion has been discontinued and is no longer offered in the current app. For assistance with an earlier transaction, contact support@solveqo.com.
 
 ---
 

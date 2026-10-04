@@ -145,13 +145,14 @@ We also store in-app notification preference settings, such as toggles for chat,
 
 ### 3.10 Purchase, subscription and entitlement data
 
-If you subscribe to SOLVEQO Pro or buy Priority promotion, we and our purchase providers may process:
+If you subscribe to SOLVEQO Pro, we and our purchase providers may process:
 
 - subscription status and entitlement status;
 - app user/customer identifiers linked to your SOLVEQO account;
 - store transaction or subscription identifiers from Apple or Google;
 - webhook and entitlement records needed to provide Pro features;
-- the job linked to a Priority transaction and its consumption, refund or revocation status.
+- records of earlier discontinued Priority purchases, where needed for support or refunds;
+- your verified account email and access dates if you participate in complimentary Pro testing.
 
 SOLVEQO does **not** receive full payment card numbers from Apple or Google for these subscriptions.
 
